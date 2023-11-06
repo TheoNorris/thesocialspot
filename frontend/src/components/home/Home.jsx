@@ -5,7 +5,7 @@ import { DesktopMain } from "./MainDesktop";
 export function HomePage() {
   return (
     <>
-      <div id="home-container">
+      <div className="container">
         <DesktopMain />
         <Login />
       </div>

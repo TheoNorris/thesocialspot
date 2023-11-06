@@ -1,8 +1,10 @@
+import { useLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Error } from "../Error";
 import { Loading } from "../loading";
 
 export function Login() {
+  const navigate = useNavigate();
   const [status, setStatus] = useState("ok");
   const [loginText, setLoginText] = useState("");
   const [customerDetails, setCustomerDetails] = useState({
@@ -50,6 +52,7 @@ export function Login() {
       } else {
         setLoginText("Login Succesful!");
         setStatus("ok");
+        navigate("/mainfeed");
       }
     } catch (error) {
       console.error("Error fetching data", error);
@@ -84,28 +87,21 @@ export function Login() {
               name="password"
               type="password"
               onChange={handleInputChange}
-              className="form-control"
+              className="form-control password-input"
               id="exampleInputPassword1"
             />
           </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="exampleCheck1"
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="login-button btn btn-primary">
             LOGIN
           </button>
         </form>
       )}
-      <h1 id="login-h1">{loginText}</h1>
+      <h5 id="login-h1">{loginText}</h5>
       <label className="new-customer form-check-label" htmlFor="exampleCheck1">
-        ARE YOU A NEW CUSTOMER?
+        ARE YOU NEW TO THE SOCIAL SPOT?
       </label>
 
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="login-button btn btn-primary">
         REGISTER HERE!
       </button>
     </div>
