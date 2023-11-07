@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
+import { Feed } from "./Feed";
 
 export function MainFeed() {
   return (
-    <>
-      <div className="container feed-container">
-        <h1>mainFeed</h1>
+    <div className="container feed-container">
+      <div className="feed-div">
+        <Feed />
       </div>
-    </>
+      <div className="feed-div">
+        <Feed />
+      </div>
+    </div>
   );
 }

@@ -6,6 +6,10 @@ body {
   letter-spacing: 2px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -13,4 +17,52 @@ body {
 
 button {
   background-color: #ebd7fa;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 20px;
+}
+
+#logo-image {
+  height: 60px;
+}
+
+#footer-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+  color: var(--gassed-purple);
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+#footer-div a {
+  color: var(--gassed-purple);
+  margin: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+#footer-div a:hover {
+  color: var(--gassed-green);
+}
+
+#footer-div h5 {
+  margin: 5px;
+  font-size: 15px;
+}
+
+#socials {
+  display: flex;
+  flex-direction: column;
+  color: var(--gassed-purple);
 }

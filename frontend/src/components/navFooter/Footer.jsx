@@ -16,7 +16,7 @@ function AboutUs() {
         <h5>ABOUT US</h5>
       </a>
       <a href="">
-        <h5>ABOUT GASSED</h5>
+        <h5>ABOUT SOCIAL SPOT</h5>
       </a>
       <a href="">
         <h5>BECOME AN AFFILIATE</h5>
